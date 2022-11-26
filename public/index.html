@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Base</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-600 font-body h-screen">
+    <div class="flex flex-col md:flex-row min-h-full">
+
+        <div class="w-full md:w-2/12">
+            <nav>
+                <div class="text-start md:text-end p-3 relative">
+                    <h1 class="font-bold uppercase text-lg text-gray-700">
+                        <a href="/">Food Lover</a>
+                    </h1>
+                    <button class="md:hidden absolute top-0 right-0 mt-4 mr-3" id="open-menu">
+                        <svg class="fill-current text-gray-600 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:block transition duration-500 ease-out " id="menu">
+                    <li class="text-end pr-2 mr-3 md:mr-0 mb-3 border-r-4 border-primary hover:border-primary hover:font-bold">
+                        <a href="#">
+                            <span>
+                                Home
+                                <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="text-end pr-2 mr-3 md:mr-0 mb-3 border-r-4 border-white hover:border-primary hover:font-bold">
+                        <a href="#">
+                            <span>
+                                About
+                                <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="text-end pr-2 mr-3 md:mr-0 mb-3 border-r-4 border-white hover:border-primary hover:font-bold">
+                        <a href="#">
+                            <span>
+                                Contact
+                                <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div> <!-- end nav -->
+
+        <main class="w-full md:w-10/12 px-16 py-6 bg-slate-200 flex-auto">
+            <div class="flex justify-center md:justify-end mb-3">
+                <a href="#" class="text-primary py-1 px-3 mr-3 rounded-3xl border border-primary hover:bg-primary hover:text-white">Log in</a>
+                <a href="#" class="text-primary py-1 px-3 rounded-3xl border border-primary hover:bg-primary hover:text-white">Sign up</a>
+            </div>
+
+            <header>
+                <h2 class="text-7xl font-bold">Recipes</h2>
+                <h3 class="text-4xl mt-4 mb-8">For Lover</h3>
+            </header>
+
+            <section>
+                <h4 class="head-line">Latest Recipes</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="card">
+                        <span class="badge">
+                            <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg>
+                            25 mins
+                        </span>
+                        <img src="https://via.placeholder.com/600x600?text=Place%20Holder" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-3">
+                            <p class="font-bold mt-2 mb-1">Lorem</p>
+                            <p>Recipe by Mario</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="badge">
+                            <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg>
+                            25 mins
+                        </span>
+                        <img src="https://via.placeholder.com/600x600?text=Place%20Holder" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-3">
+                            <p class="font-bold mt-2 mb-1">Lorem</p>
+                            <p>Recipe by Mario</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="badge">
+                            <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg>
+                            25 mins
+                        </span>
+                        <img src="https://via.placeholder.com/600x600?text=Place%20Holder" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-3">
+                            <p class="font-bold mt-2 mb-1">Lorem</p>
+                            <p>Recipe by Mario</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="badge">
+                            <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg>
+                            25 mins
+                        </span>
+                        <img src="https://via.placeholder.com/600x600?text=Place%20Holder" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-3">
+                            <p class="font-bold mt-2 mb-1">Lorem</p>
+                            <p>Recipe by Mario</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4 class="head-line">Most Popular</h4>
+
+                <div class="flex justify-center">
+                    <a class="bg-secondary-100 py-2.5 px-4 rounded-3xl cursor-pointer hover:bg-secondary-200">Load more</a>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    <script src="action.js"></script>
+</body>
+</html>
